@@ -23,9 +23,9 @@ services:
     image: node:16.1.0-alpine3.13
     container_name: tasks-consumer
     restart: unless-stopped
-    working_dir: /home/node/consumer
+    working_dir: /home/node/tasks-consumer
     volumes:
-      - ./consumer/src:/home/node/consumer
+      - ./consumer/src:/home/node/tasks-consumer
     networks:
       - tasks-network
     command: sh -c "npm install && npm install -g nodemon && nodemon app.js"
